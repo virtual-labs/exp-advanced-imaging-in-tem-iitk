@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1.In Dark Field TEM, the image is formed by using:?",
+      "question": "1.Which of the following is a key advantage of WBDF TEM over standard Dark Field TEM?",
       "answers": {
-        "a": "The direct beam",
-        "b": "The diffracted beams",
-        "c": "Both direct and diffracted beams",
-        "d": "Secondary electrons"
+        "a": "Better imaging of amorphous materials",
+        "b": "Higher resolution of dislocations and defects",
+        "c": "Easier sample preparation",
+        "d": "Lower electron dose on the sample"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +19,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2.Which of the following components is adjusted to obtain a Dark Field image in TEM?",
+      "question": "2.WBDF TEM is particularly useful for observing:",
       "answers": {
-        "a": "Electron gun",
-        "b": "Objective lens",
-        "c": "Aperture",
-        "d": "Fluorescent screen"
+        "a": "Atomic numbers of elements",
+        "b": "Amorphous regions",
+        "c": "Crystal lattice dislocations and stacking faults",
+        "d": "Topographical features"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -35,22 +35,6 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-    {
-      "question": "3.In Dark Field TEM, why are diffracted beams selected instead of the direct beam?",
-      "answers": {
-        "a": "To observe defects in the crystal structure",
-        "b": "To increase brightness",
-        "c": "To reduce image noise",
-        "d": "To increase magnification"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    }
+  
   ]
 }
