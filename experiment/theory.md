@@ -8,7 +8,7 @@ As the beam passes through the sample, electron interactions with the sample may
 <img src="images/Picture3.png"/> <br>
 Figure 3 High-angle annular dark field image of NbTiCrZrB2-SiC composite showing different phase contrast where the NbTiCrZrB2¬ phase appears with bright contrast and the SiC phase appears with dark contrast. Correspondingly, the elemental maps shows the distribution of different elements present in different phases.
 High-resolution TEM (HR-TEM) is a phase-contrast imaging technique that allows images to be captured with near-atomic resolution, allowing for the study of crystallinity, lattice planes, crystal phases, and defects. The high-resolution transmission electron microscopy (HRTEM) uses both the transmitted and the scattered beams to create an interference image. In tge crystalline materials, specific diffraction angles are present per the Bragg’s law, thus the interference between the electron beams which are diffracted from different planes (which satisfy the Bragg’s condition), generates a periodic pattern as per the sample’s atomic structure.<br>
-<img src="images/Picture4.png"/> <br>
+<img src="images/Picture4.jpg"/> <br>
 Figure 4. (a) HRTEM image. <br>
-<img src="images/Picture4.png"/> <br>
+<img src="images/hrtem.jpg"/> <br>
 
