@@ -9,12 +9,6 @@
         "c": "Both direct and diffracted beams",
         "d": "Secondary electrons"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
@@ -25,12 +19,6 @@
         "b": "Objective lens",
         "c": "Aperture",
         "d": "Fluorescent screen"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -43,13 +31,29 @@
         "c": "To reduce image noise",
         "d": "To increase magnification "
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In Centered Dark Field (CDF) imaging, the selected diffraction spot is positioned:",
+      "answers": {
+        "a": "At the center of the optical axis",
+        "b": "Slightly off the optical axis",
+        "c": "Outside the objective aperture",
+        "d": "Near the edge of the condenser lens"
       },
       "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The main advantage of WBDF over conventional dark field imaging is:",
+      "answers": {
+        "a": "Higher electron dose for imaging",
+        "b": "Improved contrast and spatial resolution for defects",
+        "c": "Ability to image amorphous materials",
+        "d": "Suppression of electron scattering"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
