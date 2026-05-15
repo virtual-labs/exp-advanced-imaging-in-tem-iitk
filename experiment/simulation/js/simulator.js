@@ -301,8 +301,8 @@ $(function () {
     $("#vslider").slider("option", "disabled", true);
     $("#position").prop("disabled", false);
     if (english) {
-      type("Choose the material");
-      textToSpeech("Choose the material");
+      type("Choose the Mode");
+      textToSpeech("Choose the Mode");
     } else {
       type("अब पदार्थ चुनें|");
       textToSpeech("अब पदार्थ चुनें", "hi-IN");
@@ -517,15 +517,15 @@ function drawBeam() {
 
     if (english) {
       type(
-        "The output image is displaying on the right side, choose the defect structure."
+        "The output image is displaying on the right side."
       );
       textToSpeech(
-        "The output image is displaying on the right side, choose the defect structure."
+        "The output image is displaying on the right side."
       );
     } else {
-      type("आउटपुट छवि दाईं ओर प्रदर्शित हो रही है, दोष संरचना चुनें|");
+      type("आउटपुट छवि दाईं ओर प्रदर्शित हो रही है|");
       textToSpeech(
-        "आउटपुट छवि दाईं ओर प्रदर्शित हो रही है, दोष संरचना चुनें|",
+        "आउटपुट छवि दाईं ओर प्रदर्शित हो रही है|",
         "hi-IN"
       );
     }
