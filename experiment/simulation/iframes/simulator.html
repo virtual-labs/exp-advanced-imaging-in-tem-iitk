@@ -7,137 +7,216 @@
 
     <link rel="stylesheet" href="../css/simulator.css" />
     <link rel="stylesheet" href="../css/controls.css" />
-    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
     crossorigin="anonymous"> -->
-    
   </head>
-  <body >
+
+  <body>
+    <!-- dialogue-box -->
+    <div
+    id="dialogue-box-parent"
+    style="
+      width: 100vw;
+      height: 100vh;
+      position: fixed; /* Changed to fixed for better behavior */
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex; /* Use flex to center the dialogue box */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      z-index: 999;
+    "
+  >
+    <div class="dialogue-box" style="
+          background-color: white; /* Add a background color for contrast */
+          padding: 20px; /* Add some padding */
+          border-radius: 10px; /* Rounded corners */
+          text-align: center; /* Center text */
+        ">
+      <h1>WELCOME TO THE TRANSMISSION ELECTRON MICROSCOPE SIMULATION</h1>
+      <h4 style="color: #16b639; font-style: italic">
+        Choose the language for instructions:
+      </h4>
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <button onclick="englishVoice(this)" style="background-color: green; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+          ENG
+        </button>
+        <button onclick="hindiVoice(this)" style="background-color: red; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-left: 10px; cursor: pointer;">
+          HIN
+        </button>
+      </div>
+    </div>
+  </div>
+  
+    </div>
+
     <!-- experiment instructions -->
+
     <div class="mg card fluid-container mb-2">
-      <div class= "header-bar p-1">
-        <h4 class="" style="color: blue; font-style: italic;display: inline-block;">Instructions:</h4>
-        <div id="typer"></div>
+      <div class="header-bar p-2">
+        <h4
+          class=""
+          style="color: blue; font-style: italic; display: inline-block"
+        >
+          Instructions:
+        </h4>
+        <div
+          id="typer"
+          style="
+            display: inline-block;
+            margin-left: 1rem;
+            font-size: larger;
+            font-weight: bold;
+          "
+        ></div>
       </div>
     </div>
     <!-- end of experiment instructions -->
 
     <div class="row text-center">
       <!-- col 1 start -->
-      <div class="card control_panel col-xl-3 themed-grid-col">
-        <!-- left controls/adjustments -->
-        <div class="panel padd">
+      <div class="card control_panel col-xl-3">
+        <!-- start button -->
+        <div
+          class="badge d-flex justify-content-between"
+          style="margin-bottom: 1rem"
+        >
+          <h4
+            class=""
+            style="
+              background-color: #16b639;
+              border-radius: 4px;
+              padding: 0.5rem 1.5rem;
+            "
+          >
+            Control Panel
+          </h4>
+          <div>
+            <!-- <div class="label-heading">Switch</div> -->
+            <input
+              id="toggle id"
+              class="toggle"
+              type="checkbox"
+              role="switch"
+              name="toggle"
+              value="on"
+              onclick="toggleSwitch(this);"
+            />
+            <label for="toggle" class="slot">
+              <span class="slot__label">OFF</span>
+              <span class="slot__label">ON</span>
+            </label>
+          </div>
+        </div>
+        <!-- start button end -->
 
-<!-- start button -->
-<div>
-  <div class="badge bg-success" style="width: 6rem;">
-    Control Panel
-  </div>
-  <button class="button-91" onclick="toggleVoice(this)">ENG</button>
-</div>
-<div class="padd-3">
-  <div class="label-heading">Switch</div>
-  <input
-    id="toggle id"
-    class="toggle"
-    type="checkbox"
-    role="switch"
-    name="toggle"
-    value="on"
-    onclick="toggleSwitch(this);"
-  >
-  </input>
-  <label for="toggle" class="slot">
-    <span class="slot__label">OFF</span>
-    <span class="slot__label">ON</span>
-  </label>
-</div>
-<!-- start button -->
-
-  <!-- sample load -->
-    <div class="row">
-      <div class="col-sm-6">
-        <!-- Spot to keep Sample Holder -->
-        <label for="">Place sample holder here.</label>
-        <div class="placeSampleHolder">
+        <!-- sample load -->
+        <div class="d-flex justify-content-center align-items-center boxx" style="padding-top: 20px;">
+          <button
+            id="removeButton"
+            class="button-91 m-3 p-2"
+            style="border-style: none"
+            disabled
+          >
+            Remove Sample Holder
+          </button>
+          <div class="col-sm-4" id="sample">
+            <img
+              id="image-y"
+              src="../images/parts/specimen.png"
+              alt="Y"
+              class="img-thumbnail img-fluid moveable-image y"
+            />
+            Ceramic
+          </div>
+          <button
+            id="insertButton"
+            class="button-91 m-3 p-2"
+            style="border-style: none"
+            disabled
+          >
+            Insert Sample Holder
+          </button>
         </div>
         <!-- sample load end -->
-      </div>
-      <div class="col-sm-6">
-        <img id="image-b" src="../images/parts/r.png" alt="Y"
-          class="img-fluid moveable-image y img-s" />
-        Ceramic
-      </div>
-    </div>
 
-<!-- acc voltage slider -->
-<div class="form-group padd-3">
-  <label for="formControlRange">Accelerating voltage (in kv)</label>
-  <div class="row">
-      <div class="col-9">
-          <div id="avslider" class="mt-3">
-              <div class="custom-handle ui-slider-handle" style=" padding: 0px;"></div>
+        <!-- vaccum slider -->
+        <div class="mt-2 boxx" style="padding-top: 20px;">
+          <label for=" formControlRange" disabled>Vacuum (in Pa)</label>
+          <div class="row">
+            <div class="col-9">
+              <div id="vslider" class="mt-3">
+                <div
+                  class="custom-handle ui-slider-handle"
+                  style="padding: 0px"
+                ></div>
+              </div>
+            </div>
+            <div class="col-3">
+              <button id="setvac" class="button-91 w-100" disabled>Set</button>
+            </div>
           </div>
-      </div>
-      <div class="col-3">
-          <button id="setav" class="btn btn-sm btn-success w-100" disabled>Set</button>
-      </div>
-  </div>
-</div>
-<!-- acc voltage slider end -->
+        </div>
+        <!-- end of vaccum slider -->
 
-<!-- beam on -->
-<div class="padd-3">
-  <button id="on" class="but sm w-100 green" disabled>Beam On</button>
-</div>
-<!-- beam off -->
-
-<div>
-  <span id="rangeValue">0</span>
-  <Input class="range" id="rs" type="range" name "" value="0" min="0" max="7" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)" disabled="true"></Input>
-</div>
-
-<!-- end of spot size slider -->
-
-<!-- imaging mode -->
-<div class="padd-3">
-  <label for="input">Choose Mode: </label>
-  <select class="imgMode" onchange="change()" id="position" disabled>
-    <option selected value="1">WBDF</option>
-    <option value="2">Bright Field(HAADF)</option>
-    <option value="3">Dark Field(CDF)</option>
-    <option value="4">Diffraction(SADP)</option>
-  </select>
-</div>
-<!-- imaging mode end -->
-
-<!-- magnification slider -->
-<div class="form-group padd-3">
-  <label for="formControlRange">Magnification</label>
-  <div class="row">
-      <div class="col-9">
-          <div id="mslider" class="mt-3">
-              <div class="custom-handle ui-slider-handle" style=" padding: 0px;"></div>
+        <!-- acc voltage slider -->
+        <div class="mt-2 boxx" style="padding-top: 20px;">
+          <label for="formControlRange">Accelerating voltage (in kV)</label>
+          <div class="row">
+            <div class="col-9">
+              <div id="avslider" class="mt-3">
+                <div
+                  class="custom-handle ui-slider-handle"
+                  style="padding: 0px"
+                ></div>
+              </div>
+            </div>
+            <div class="col-3">
+              <button id="setav" class="button-91 w-100" disabled>Set</button>
+            </div>
           </div>
-      </div>
-      <div class="col-3">
-          <button id="setmag" class="btn btn-sm btn-success w-100" disabled>Set</button>
-      </div>
-  </div>
-</div>
-<!-- magnification slider end -->
+        </div>
+        <!-- acc voltage slider end -->
 
-      </div>
-     
-      <div id="toast-wrapper" aria-live="polite" aria-atomic="true" style="position:fixed; right:1rem; top: 1rem; z-index: 99999;">
-      </div>
+        <!--  Choosing Material -->
+        <div class="boxx mt-2" style="padding-top: 20px;">
+          <label for="input">Choose Mode: </label>
+          <select class="imgMode" onchange="change()" id="position" disabled>
+            <option disabled selected>Select</option>
+            <option value="1">WBDF</option>
+            <option value="2">Bright Field</option>
+            <option value="3">Dark Field</option>
+            <option value="4">Diffraction</option>
+          </select>
+        </div>
+        <!-- Choosing material end -->
 
-          <!-- Add more buttons as needed -->
+        <!-- beam on -->
+        <div class="" style="padding-top: 20px;">
+          <button id="on" class="but sm w-50 m-3" disabled>Beam On</button>
+          <!-- <button id="reloadButton" class="but sm w-50 m-3" disabled>Reset</button> -->
+        </div>
+        <!-- beam off -->
 
-        <!-- end of left controls/adjustments -->
+        <!-- defect structure -->
+        <!-- <div class="boxx mt-2">
+          <label for="input">Choose Defect: </label>
+          <select
+            class="imgMode"
+            onchange="changeImage()"
+            id="position2"
+            disabled
+          >
+            <option disabled selected>Select</option>
+            <option value="3">Twins Fault</option>
+            <option value="4">Stacking Fault</option>
+          </select>
+        </div> -->
+
+    
       </div>
       <!-- col 1 end -->
 
@@ -147,8 +226,7 @@
         id="adjust-machine"
         style="position: relative"
       >
-        <!-- simulation/machine -->
-        <!-- <img src="../images/bg/tem_back.png" alt="TEM back" width="400" height="600"> -->
+       
 
         <div class="panel-2">
           <!-- parts -->
@@ -190,7 +268,7 @@
           </div>
 
           <!-- specimen -->
-          <div class="image-hover" style="top: -3.8rem; right: 0.2rem">
+          <div class="image-hover" style="top: -2.9rem; right: 0.2rem">
             <img
               data-id="4"
               title="specimen"
@@ -266,11 +344,11 @@
               <p>Projector-lens-3</p>
             </div>
           </div>
-          <div class="image-hover" style="bottom: 22rem; right:10px">
+          <div class="image-hover" style="bottom: 22rem">
             <img
               data-id="9"
               title="fluorescent-screen"
-              src="../images/parts/fluorescent_screen.png"
+              src="../images/parts/fluorescent_screen_4.png"
               id="fluorescent_screen"
             />
             <div class="hover-text card">
@@ -278,23 +356,22 @@
             </div>
           </div>
 
-          <div class="image-hover move" style="bottom: 51rem;">
-            <div class="placed">
-              <img
-                data-id="10" 
-                draggable="true" 
-                title="sample_holder1" 
-                src="../images/parts/sample_holder1.png"
-                id="image-x" />
-              <div class="hover-text card">
-                <p>Sample Holder</p>
-              </div>
+          <div class="image-hover-sh">
+            <img
+              data-id="10"
+              title="sample_holder1"
+              src="../images/parts/sample_holder1.png"
+              id="image-x"
+              class="moveable-image x"
+            />
+            <div style="color: red; border-style: none" class="hover-text card">
+              <p>Sample Holder</p>
             </div>
           </div>
           <!-- end of parts -->
 
           <!-- drop the material here -->
-         
+
           <!-- drop material end -->
 
           <!-- beam -->
@@ -330,22 +407,7 @@
 
       <!-- col 3 start -->
       <div class="card col-xl-5 themed-grid-col">
-        <!-- image formed output -->
-              <div class="col-12" id="output">
-
-                  <div class="panel">
-                      <figure data-zoom data-zoom-max="5">
-                        <!-- Bright Field(HAADF) -->
-                        <img id="outImage3" style="display: none;" class="w-100" src="../images/outputs/VHceramicBright Field.jpg" />
-                      </figure>
-
-                    </div>
-                    <img src="../images/bg/download.jpeg" style="display: none;"  id="downloadButton">
-
-                </div>
-        <!-- end of image formed output -->
-        <!-- theory -->
-        <div class="alert alert-success d-flex align-items-center" role="alert">
+         <div class="alert alert-success d-flex align-items-center" role="alert">
           <svg
             class="bi flex-shrink-0 me-2"
             style="height: 2rem; width: 2rem"
@@ -354,23 +416,81 @@
           >
             <use xlink:href="#info-fill" />
           </svg>
-          <div>Please follow the instructions carefully. Handle with care.</div>
+          <div>Please follow the instructions carefully to get desire result.</div>
         </div>
+        <!-- image formed output -->
+        <div class="col-12" id="output">
+          <div class="panel">
+            <figure data-zoom data-zoom-max="5">
+              <img
+                id="outImage1"
+                style="display: none"
+                class="w-100"
+                src="../images/outputs/WBDF.png"
+              />
+            </figure>
+            <figure data-zoom data-zoom-max="5">
+              <img
+                id="outImage2"
+                style="display: none"
+                class="w-100"
+                src="../images/outputs/bright_field.png"
+              />
+            </figure>
+            <figure data-zoom data-zoom-max="5">
+              <img
+                id="outImage3"
+                style="display: none"
+                class="w-100"
+                src="../images/outputs/dark_field.png"
+              />
+            </figure>
+            <figure data-zoom data-zoom-max="5">
+              <img
+                id="outImage4"
+                style="display: none"
+                class="w-100"
+                src="../images/outputs/SADP.png"
+              />
+            </figure>
+             <figure data-zoom data-zoom-max="5">
+              <img
+                id="outImage5"
+                style="display: none"
+                class="w-100"
+                src="../images/outputs/SADP.png"
+              />
+            </figure>
+             <figure data-zoom data-zoom-max="5">
+              <img
+                id="outImage6"
+                style="display: none"
+                class="w-100"
+                src="../images/outputs/stack poly.png"
+              />
+            </figure>
+          
+          </div>
+        </div>
+        <!-- end of image formed output -->
+        <!-- theory -->
+       
         <!-- end of theory code -->
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="downloadBtn" class="btn btn-primary" onclick="downloadVisibleImage()">Download Image</button>
+        </div>
       </div>
       <!-- col 3 end -->
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/jquery-ui.min.js"></script>    
-     
-    <script src="../js/simulator.js"></script>    
-    <!-- <script src="../js/jquery.min.js"></script> -->
+    <script src="../js/jquery-ui.min.js"></script>
 
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
- crossorigin="anonymous"></script> -->
+    <script src="../js/simulator.js"></script>
   </body>
 </html>
