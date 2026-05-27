@@ -22,4 +22,4 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
 1 | Akash Kumar | Student | Computer Science | BU Jhansi | akasr1603@gmail.com
 2 | Rahul Mitra | Student | MSE  |  IIT Kanpur | rmitra@iitk.ac.in
-3 | Khushboo Singh | Employee | MSE |  IIT Kanpur | skhushboo@iitk.ac.in
+3 | Khushboo Singh |  | MSE |  IIT Kanpur | skhushboo@iitk.ac.in
