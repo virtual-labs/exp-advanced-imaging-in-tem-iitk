@@ -55,6 +55,28 @@
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+      {
+      "question": "A selected-area diffraction pattern exhibits additional weak reflections at positions forbidden by the ideal crystal symmetry. These reflections most likely indicate:",
+      "answers": {
+        "a": "Sample contamination only",
+        "b": "Crystal ordering or superlattice formation",
+        "c": "Vacuum instability",
+        "d": "Detector malfunction"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+      {
+      "question": "A bright-field TEM image shows a localized dark region within an otherwise uniform crystalline matrix. Which of the following cannot be concluded solely from the image?",
+      "answers": {
+        "a": "The region may be thicker than the surrounding material.",
+        "b": "The region may satisfy a stronger diffraction condition.",
+        "c": "The region contains a heavier element.",
+        "d": "The exact origin of the contrast requires additional characterization."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
   ]
 }
