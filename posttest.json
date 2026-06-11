@@ -1,0 +1,61 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which of the following is a key advantage of WBDF TEM over standard Dark Field TEM?",
+      "answers": {
+        "a": "Better imaging of amorphous materials",
+        "b": "Higher resolution of dislocations and defects",
+        "c": "Easier sample preparation",
+        "d": "Lower electron dose on the sample"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "WBDF TEM is particularly useful for observing:",
+      "answers": {
+        "a": "Atomic numbers of elements",
+        "b": "Amorphous regions",
+        "c": "Crystal lattice dislocations and stacking faults",
+        "d": "Topographical features"
+      },
+      "correctAnswer": "C",
+      "difficulty": "beginner"
+    },
+       {
+      "question": "The main limitation of HRTEM for imaging heavy-element materials is:",
+      "answers": {
+        "a": "Chromatic aberration",
+        "b": "Low contrast due to weak phase objects",
+        "c": "High radiation damage",
+        "d": "Inability to reach atomic resolution"
+      },
+      "correctAnswer": "C",
+      "difficulty": "beginner"
+    },
+       {
+      "question": "In WBDF imaging, which diffraction condition enhances defect contrast the most?",
+      "answers": {
+        "a": "g reflection",
+        "b": "g + g reflection",
+        "c": "g + 3g reflection",
+        "d": "Zone-axis orientation"
+      },
+      "correctAnswer": "C",
+      "difficulty": "beginner"
+    },
+       {
+      "question": "The key advantage of HAADF-STEM imaging over conventional TEM techniques is:",
+      "answers": {
+        "a": "Higher diffraction contrast for dislocations",
+        "b": "Ability to detect single atoms based on atomic number",
+        "c": "Reduced electron dose requirements",
+        "d": "Sensitivity to magnetic properties"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+
+  ]
+}
