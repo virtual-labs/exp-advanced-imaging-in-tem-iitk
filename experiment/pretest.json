@@ -2,35 +2,78 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "In Dark Field TEM, the image is formed by using?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The direct beam",
+        "b": "The diffracted beams",
+        "c": "Both direct and diffracted beams",
+        "d": "Secondary electrons"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following components is adjusted to obtain a Dark Field image in TEM?",
+      "answers": {
+        "a": "Electron gun",
+        "b": "Objective lens",
+        "c": "Aperture",
+        "d": "Fluorescent screen"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In Dark Field TEM, why are diffracted beams selected instead of the direct beam?",
+      "answers": {
+        "a": "To observe defects in the crystal structure",
+        "b": "To increase brightnessy",
+        "c": "To reduce image noise",
+        "d": "To increase magnification "
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In Centered Dark Field (CDF) imaging, the selected diffraction spot is positioned:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "At the center of the optical axis",
+        "b": "Slightly off the optical axis",
+        "c": "Outside the objective aperture",
+        "d": "Near the edge of the condenser lens"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The main advantage of WBDF over conventional dark field imaging is:",
+      "answers": {
+        "a": "Higher electron dose for imaging",
+        "b": "Improved contrast and spatial resolution for defects",
+        "c": "Ability to image amorphous materials",
+        "d": "Suppression of electron scattering"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+      {
+      "question": "A selected-area diffraction pattern exhibits additional weak reflections at positions forbidden by the ideal crystal symmetry. These reflections most likely indicate:",
+      "answers": {
+        "a": "Sample contamination only",
+        "b": "Crystal ordering or superlattice formation",
+        "c": "Vacuum instability",
+        "d": "Detector malfunction"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+      {
+      "question": "A bright-field TEM image shows a localized dark region within an otherwise uniform crystalline matrix. Which of the following cannot be concluded solely from the image?",
+      "answers": {
+        "a": "The region may be thicker than the surrounding material.",
+        "b": "The region may satisfy a stronger diffraction condition.",
+        "c": "The region contains a heavier element.",
+        "d": "The exact origin of the contrast requires additional characterization."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
